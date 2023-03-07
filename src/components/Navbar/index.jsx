@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <header className=" w-full text-white bg-[#2B2C43] ">
+    <header className=" w-full sticky  text-white bg-[#2B2C43] ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">

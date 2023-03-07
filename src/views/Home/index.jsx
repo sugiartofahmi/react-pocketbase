@@ -6,5 +6,4 @@ const Home = () => {
     </ContentLayout>
   );
 };
-
 export default Home;

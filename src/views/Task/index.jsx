@@ -1,8 +1,10 @@
 import { lazy, useEffect, useState } from "react";
 import { pocketbaseHooks } from "../../../pocketbase/lib";
+import { useNavigate } from "react-router-dom";
 const ContentLayout = lazy(() => import("../../layouts/ContentLayout"));
 const Task = () => {
   document.title = "TASKU | Task";
+  const navigate = useNavigate();
   const { addList } = pocketbaseHooks();
   const [nim, setNim] = useState();
   const [name, setName] = useState();
@@ -14,6 +16,7 @@ const Task = () => {
   };
   const upload = () => {
     addList(data);
+    navigate("/list");
   };
 
   return (
